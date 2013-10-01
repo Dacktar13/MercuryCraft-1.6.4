@@ -1,6 +1,7 @@
 package mercurycraft.items;
 
-import buildcraft.transport.Pipe;
+import java.nio.channels.Pipe;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;

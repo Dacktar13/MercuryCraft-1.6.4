@@ -52,7 +52,7 @@ public class EntitySpaceship extends Entity implements IEntityAdditionalSpawnDat
     }		
 	
 	@Override
-    public boolean func_130002_c(EntityPlayer player) {
+    public boolean interactFirst(EntityPlayer player) {
         if (!worldObj.isRemote && riddenByEntity == null) {
         	player.mountEntity(this);
         }    

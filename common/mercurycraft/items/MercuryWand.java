@@ -6,6 +6,7 @@ import mercurycraft.CreativeTabMercuryCraft;
 import mercurycraft.client.sounds.Sounds;
 import mercurycraft.entities.EntitySpaceship;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -28,7 +29,7 @@ public class MercuryWand extends Item {
 	}
 
 	@Override
-	public boolean func_111207_a(ItemStack itemstack, EntityPlayer player, EntityLivingBase target) {
+	public boolean onLeftClickEntity(ItemStack itemstack, EntityPlayer player, Entity target) {
 		if (!target.worldObj.isRemote) {
 			target.motionY = 2;
 			if (isCharged(itemstack.getItemDamage())) {

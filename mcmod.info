@@ -1,0 +1,21 @@
+[
+{
+  "modid": "MercuryCraft",
+  "name": "MercuryCraft",
+  "description": "Additions to power storage and other Mercury related things",
+  "version": "@VERSION@",
+  "mcversion": "1.6.4",
+  "url": "http://www.dacktar.co.uk/mercurycraft",
+  "updateUrl": "",
+  "authors": [
+    "dacktar"
+  ],
+  "credits": "By Dacktar, based on BuildCraft and IC2 Power",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

@@ -9,7 +9,7 @@ public class EntityPoisonFX extends EntityFX {
 	public EntityPoisonFX(World world, double x, double y, double z, double motionX, double motionY, double motionZ) {
 		super(world, x, y, z, motionX, motionY, motionZ);	
 		
-		func_110125_a(Blocks.poison.particleIcon);
+		setParticleIcon(Blocks.poison.particleIcon);
 		
 		particleScale = 3;
 		particleAlpha = rand.nextFloat();

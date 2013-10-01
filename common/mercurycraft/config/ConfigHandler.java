@@ -2,9 +2,6 @@ package mercurycraft.config;
 
 import java.io.File;
 
-import buildcraft.BuildCraftCore;
-import buildcraft.core.DefaultProps;
-
 import mercurycraft.blocks.BlockInfo;
 import mercurycraft.fluid.FluidInfo;
 import mercurycraft.items.ItemInfo;
@@ -60,14 +57,14 @@ public class ConfigHandler {
 				FluidInfo.BIOME_MERCURY_OCEAN_DEFAULT);
 
 		int defaultmercuryId = FluidInfo.MERCURY_FLUID_ID;
-		if (ConfigHandler.hasKey(Configuration.CATEGORY_BLOCK,
-				"mercuryStill.id")) {
-			defaultmercuryId = config.get(Configuration.CATEGORY_BLOCK,
-					"mercuryStill.id", defaultmercuryId).getInt(
-					defaultmercuryId);
-			ConfigHandler.getCategory(Configuration.CATEGORY_BLOCK).remove(
-					"mercuryStill.id");
-		}
+//		if (ConfigHandler.hasKey(Configuration.CATEGORY_BLOCK,
+//				"mercuryStill.id")) {
+//			defaultmercuryId = config.get(Configuration.CATEGORY_BLOCK,
+//					"mercuryStill.id", defaultmercuryId).getInt(
+//					defaultmercuryId);
+//			ConfigHandler.getCategory(Configuration.CATEGORY_BLOCK).remove(
+//					"mercuryStill.id");
+//		}
 
 		config.save();
 	}
