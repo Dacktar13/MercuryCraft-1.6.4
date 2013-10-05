@@ -1,6 +1,5 @@
 package mercurycraft.blocks;
 
-import net.minecraft.block.Block;
 
 public class BlockInfo {
 	

@@ -30,6 +30,8 @@ import cpw.mods.fml.common.network.NetworkMod;
 @NetworkMod(channels = { ModInformation.CHANNEL }, clientSideRequired = true, serverSideRequired = false, packetHandler = PacketHandler.class)
 
 public class MercuryCraft {
+	
+	public static boolean modifyWorld = false;
 
 	@Instance(ModInformation.ID)
 	public static MercuryCraft instance;
@@ -42,7 +44,7 @@ public class MercuryCraft {
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		Items.init();
 		Blocks.init();
-		//Fluids.init();
+		
 
 		proxy.initSounds();
 		proxy.initRenderers();
@@ -65,6 +67,7 @@ public class MercuryCraft {
 
 	@EventHandler
 	public void modsLoaded(FMLPostInitializationEvent event) {
+		
 
 	}
 	

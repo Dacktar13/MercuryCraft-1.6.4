@@ -7,10 +7,15 @@ import mercurycraft.fluid.FluidInfo;
 import mercurycraft.items.ItemInfo;
 import net.minecraftforge.common.Configuration;
 
-public class ConfigHandler {
+public class ConfigHandler extends Configuration {
+	public static MercuryCraftConfiguration config;
+
+	public static boolean canMercuryBurn;
+	public static double mercuryWellScalar;
+	
 
 	public static void init(File file) {
-		Configuration config = new Configuration(file);
+		config = new MercuryCraftConfiguration(file);
 
 		config.load();
 
@@ -43,6 +48,23 @@ public class ConfigHandler {
 				ItemInfo.CARD_DEFAULT).getInt() - 256;
 		// ItemInfo.MERCURY_PIPE_ID = config.getItem(ItemInfo.MERCURY_PIPE_KEY,
 		// ItemInfo.MERCURY_PIPE_DEFAULT).getInt() - 256;
+
+		config.save();
+	}
+
+	public static void fluidInit(File file) {
+		config = new MercuryCraftConfiguration(file);
+
+		config.load();
+
+		FluidInfo.MERCURY_FLUID_ID = config.getBlock(
+				FluidInfo.MERCURY_FLUID_KEY, FluidInfo.MERCURY_FLUID_DEFAULT)
+				.getInt();
+
+		FluidInfo.BLOCK_MERCURY_FLUID_ID = config.getBlock(
+				FluidInfo.BLOCK_MERCURY_FLUID_KEY,
+				FluidInfo.BLOCK_MERCURY_FLUID_DEFAULT).getInt();
+
 		ItemInfo.MERCURY_BUCKET_ID = config.getItem(
 				ItemInfo.MERCURY_BUCKET_KEY, ItemInfo.MERCURY_BUCKET_DEFAULT)
 				.getInt() - 256;
@@ -56,17 +78,12 @@ public class ConfigHandler {
 				FluidInfo.BIOME_MERCURY_OCEAN_DEFAULT).getInt(
 				FluidInfo.BIOME_MERCURY_OCEAN_DEFAULT);
 
-		int defaultmercuryId = FluidInfo.MERCURY_FLUID_ID;
-//		if (ConfigHandler.hasKey(Configuration.CATEGORY_BLOCK,
-//				"mercuryStill.id")) {
-//			defaultmercuryId = config.get(Configuration.CATEGORY_BLOCK,
-//					"mercuryStill.id", defaultmercuryId).getInt(
-//					defaultmercuryId);
-//			ConfigHandler.getCategory(Configuration.CATEGORY_BLOCK).remove(
-//					"mercuryStill.id");
-//		}
+		canMercuryBurn = config.get(Configuration.CATEGORY_GENERAL, "burnOil",
+				true, "Can oil burn?").getBoolean(true);
+		mercuryWellScalar = config.get(Configuration.CATEGORY_GENERAL,
+				"oilWellGenerationRate", 1.0,
+				"Probability of oil well generation").getDouble(1.0);
 
 		config.save();
 	}
-
 }
