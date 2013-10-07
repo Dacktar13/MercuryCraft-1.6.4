@@ -45,7 +45,7 @@ public class ItemInfo {
 	public static final int MERCURY_BUCKET_DEFAULT = 29665;
 	public static final String MERCURY_BUCKET_UNLOCALIZED_NAME = "bucketMercury";
 	public static final String MERCURY_BUCKET_NAME = "Bucket of Mercury";
-	public static final String MERCURY_BUCKET_ICON = "bucketMercury";
+	public static final String MERCURY_BUCKET_ICON = "mercuryBucket";
 	
 	
 	

@@ -71,12 +71,10 @@ public class ConfigHandler extends Configuration {
 
 		FluidInfo.BIOME_MERCURY_DESERT_ID = config.get("biomes",
 				FluidInfo.BIOME_MERCURY_DESERT_KEY,
-				FluidInfo.BIOME_MERCURY_DESERT_DEFAULT).getInt(
-				FluidInfo.BIOME_MERCURY_DESERT_DEFAULT);
+				FluidInfo.BIOME_MERCURY_DESERT_DEFAULT).getInt();
 		FluidInfo.BIOME_MERCURY_OCEAN_ID = config.get("biomes",
 				FluidInfo.BIOME_MERCURY_OCEAN_KEY,
-				FluidInfo.BIOME_MERCURY_OCEAN_DEFAULT).getInt(
-				FluidInfo.BIOME_MERCURY_OCEAN_DEFAULT);
+				FluidInfo.BIOME_MERCURY_OCEAN_DEFAULT).getInt();
 
 		canMercuryBurn = config.get(Configuration.CATEGORY_GENERAL, "burnOil",
 				true, "Can oil burn?").getBoolean(true);
