@@ -4,19 +4,19 @@ public class FluidInfo {
 
 	public static final String TEXTURE_LOCATION = "mercurycraft";
 
-	public static int MERCURY_FLUID_ID;
+	/*public static int MERCURY_FLUID_ID;
 	public static final String MERCURY_FLUID_KEY = "fluidMercury";
 	public static final int MERCURY_FLUID_DEFAULT = 2520;
 	public static final String MERCURY_FLUID_UNLOCALIZED_NAME = "fluidMercury";
 	public static final String MERCURY_FLUID_NAME = "Mercury Fluid";
-	public static final String MERCURY_FLUID_ICON = "mercuryLiquidStill";
+	public static final String MERCURY_FLUID_ICON = "mercury_still";*/
 	
 	public static int BLOCK_MERCURY_FLUID_ID;
-	public static final String BLOCK_MERCURY_FLUID_KEY = "blockfluidMercury";
+	public static final String BLOCK_MERCURY_FLUID_KEY = "fluidMercury";
 	public static final int BLOCK_MERCURY_FLUID_DEFAULT = 2521;
-	public static final String BLOCK_MERCURY_FLUID_UNLOCALIZED_NAME = "blockfluidMercury";
-	public static final String BLOCK_MERCURY_FLUID_NAME = "Block Mercury Fluid";
-	public static final String BLOCK_MERCURY_FLUID_ICON = "blockfluidMercury";
+	public static final String BLOCK_MERCURY_FLUID_UNLOCALIZED_NAME = "mercury";
+	public static final String BLOCK_MERCURY_FLUID_NAME = "mercury";
+	public static final String BLOCK_MERCURY_FLUID_ICON = "mercury_still";
 		
 	public static int BIOME_MERCURY_DESERT_ID;
 	public static final String BIOME_MERCURY_DESERT_KEY = "mercuryDesert";

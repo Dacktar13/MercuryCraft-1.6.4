@@ -9,12 +9,12 @@ public class EntityPoisonFX extends EntityFX {
 	public EntityPoisonFX(World world, double x, double y, double z, double motionX, double motionY, double motionZ) {
 		super(world, x, y, z, motionX, motionY, motionZ);	
 		
-		setParticleIcon(Blocks.poison.particleIcon);
+		setParticleIcon(Blocks.mercuryOre.particleIcon);
 		
 		particleScale = 3;
 		particleAlpha = rand.nextFloat();
-		particleRed = rand.nextFloat() * 0.5F;
-		particleGreen = rand.nextFloat() * 0.5F + 0.5F;
+		particleRed = rand.nextFloat() * 0.5F + 0.5F;
+		particleGreen = rand.nextFloat() * 0.5F;
 		particleBlue = rand.nextFloat() * 0.5F;
 	}
 	

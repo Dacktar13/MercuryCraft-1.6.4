@@ -33,20 +33,24 @@ import cpw.mods.fml.relauncher.SideOnly;
 			super(id, fluid, material);
 		}
 		@SideOnly(Side.CLIENT)
-		protected Icon[] theIcon;
+		protected Icon theIcon;
 		protected boolean flammable;
 		protected int flammability = 0;
+		
 
 		@Override
 		public Icon getIcon(int side, int meta) {
-			return side != 0 && side != 1 ? this.theIcon[1] : this.theIcon[0];
+			return side != 0 && side != 1 ? this.theIcon : this.theIcon;
 		}
 
 		@Override
 		@SideOnly(Side.CLIENT)
-		public void registerIcons(IconRegister iconRegister) {
-			this.theIcon = new Icon[]{iconRegister.registerIcon("mercurycraft:" + fluidName + "_still"), iconRegister.registerIcon("mercurycraft:" + fluidName + "_flow")};
+		public void registerIcons(IconRegister register) {
+			theIcon = register.registerIcon(FluidInfo.TEXTURE_LOCATION + ":"
+					+ fluidName + "_still");
 		}
+			
+		
 
 		public BlockMercurycraftFluid setFlammable(boolean flammable) {
 			this.flammable = flammable;

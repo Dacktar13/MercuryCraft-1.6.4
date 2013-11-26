@@ -20,4 +20,8 @@ import net.minecraft.item.ItemStack;
 		public String getItemDisplayName(ItemStack itemstack) {
 			return StringUtils.localize(getUnlocalizedName(itemstack));
 		}
+		
+		
+
 	}
+	

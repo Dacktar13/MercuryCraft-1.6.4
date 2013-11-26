@@ -57,6 +57,7 @@ public class MercuryCraft {
 		Blocks.addNames();
 		
 		Items.registerRecipes();
+		Blocks.registerRecipes();
 		
 		Blocks.registerTileEntities();
 		

@@ -1,5 +1,6 @@
 package mercurycraft.fluid;
 
+import mercurycraft.blocks.BlockInfo;
 import mercurycraft.config.ConfigHandler;
 import mercurycraft.items.ItemInfo;
 import mercurycraft.proxies.CommonProxy;
@@ -16,6 +17,7 @@ import net.minecraftforge.common.Property;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Fluids {
@@ -58,7 +60,7 @@ public class Fluids {
 					.makeBiome(FluidInfo.BIOME_MERCURY_OCEAN_ID);
 		}
 
-		// Oil and fuel
+		// mercury
 		mercurycraftFluidMercury = new Fluid("mercury").setDensity(800)
 				.setViscosity(1500);
 		FluidRegistry.registerFluid(mercurycraftFluidMercury);
@@ -70,9 +72,11 @@ public class Fluids {
 						FluidInfo.BLOCK_MERCURY_FLUID_ID, fluidMercury,
 						Material.water).setFlammable(canMercuryBurn)
 						.setFlammability(0);
-				blockMercuryLiquid.setUnlocalizedName("blockMercury");
-				CommonProxy.proxy.addName(blockMercuryLiquid, "Mercury");
+				blockMercuryLiquid.setUnlocalizedName(FluidInfo.BLOCK_MERCURY_FLUID_UNLOCALIZED_NAME);
+				CommonProxy.proxy.addName(blockMercuryLiquid, "mercury");
+				//LanguageRegistry.addName(blockMercuryLiquid, FluidInfo.BLOCK_MERCURY_FLUID_NAME);
 				CommonProxy.proxy.registerBlock(blockMercuryLiquid);
+				//GameRegistry.registerBlock(blockMercuryLiquid, FluidInfo.BLOCK_MERCURY_FLUID_KEY);
 				fluidMercury.setBlockID(blockMercuryLiquid);
 			}
 		} else {

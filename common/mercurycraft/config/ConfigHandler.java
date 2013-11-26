@@ -31,8 +31,6 @@ public class ConfigHandler extends Configuration {
 				BlockInfo.MACHINE_DEFAULT).getInt();
 		BlockInfo.BOMB_ID = config.getBlock(BlockInfo.BOMB_KEY,
 				BlockInfo.BOMB_DEFAULT).getInt();
-		BlockInfo.POISON_ID = config.getBlock(BlockInfo.POISON_KEY,
-				BlockInfo.POISON_DEFAULT).getInt();
 		BlockInfo.MERCURY_BLOCK_ID = config.getBlock(
 				BlockInfo.MERCURY_BLOCK_KEY, BlockInfo.MERCURY_BLOCK_DEFAULT)
 				.getInt();
@@ -57,9 +55,9 @@ public class ConfigHandler extends Configuration {
 
 		config.load();
 
-		FluidInfo.MERCURY_FLUID_ID = config.getBlock(
+		/*FluidInfo.MERCURY_FLUID_ID = config.getBlock(
 				FluidInfo.MERCURY_FLUID_KEY, FluidInfo.MERCURY_FLUID_DEFAULT)
-				.getInt();
+				.getInt();*/
 
 		FluidInfo.BLOCK_MERCURY_FLUID_ID = config.getBlock(
 				FluidInfo.BLOCK_MERCURY_FLUID_KEY,

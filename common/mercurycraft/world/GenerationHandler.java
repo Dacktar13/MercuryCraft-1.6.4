@@ -13,14 +13,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class GenerationHandler implements IWorldGenerator {
 
 	private WorldGenerator mercuryGen;
-	private WorldGenerator poisonGen;
 
 	public GenerationHandler() {
 
 		GameRegistry.registerWorldGenerator(this);
 		mercuryGen = new WorldGenMinable(BlockInfo.MERCURY_ORE_ID, 8);
-		GameRegistry.registerWorldGenerator(this);
-		poisonGen = new WorldGenMinable(BlockInfo.POISON_ID, 16);
 	}
 
 	private void generateStandardOre(Random rand, int chunkX, int chunkZ, World world,
@@ -37,7 +34,6 @@ public class GenerationHandler implements IWorldGenerator {
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
 			IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
-		generateStandardOre(random, chunkX, chunkZ, world, 20, mercuryGen, 0 , 35);
-		generateStandardOre(random, chunkX, chunkZ, world, 20, poisonGen, 0, 128);
+		generateStandardOre(random, chunkX, chunkZ, world, 20, mercuryGen, 0 , 128);
 	}
 }

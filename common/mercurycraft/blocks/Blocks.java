@@ -1,20 +1,20 @@
 package mercurycraft.blocks;
 
 import mercurycraft.items.ItemMachine;
+import mercurycraft.items.Items;
 import mercurycraft.tileentities.TileEntityBomb;
 import net.minecraft.block.Block;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Blocks {
 
-	public static Block mercuryOre;
+	public static MercuryOre mercuryOre;
 	public static Block batteryBox;
 	public static Block mercuryEngine;
 	public static Block machine;
 	public static Block bomb;
-	public static BlockPoison poison;
-	
 	public static Block blockMercury;
 	public static Block springBlock;
 
@@ -26,11 +26,10 @@ public class Blocks {
 		mercuryEngine = new MercuryEngine(BlockInfo.MERCURY_ENGINE_ID);
 		GameRegistry.registerBlock(mercuryEngine, BlockInfo.MERCURY_ENGINE_KEY);
 		machine = new BlockMachine(BlockInfo.MACHINE_ID);
-		GameRegistry.registerBlock(machine, ItemMachine.class, BlockInfo.MACHINE_KEY);
+		GameRegistry.registerBlock(machine, ItemMachine.class,
+				BlockInfo.MACHINE_KEY);
 		bomb = new BlockBomb(BlockInfo.BOMB_ID);
 		GameRegistry.registerBlock(bomb, BlockInfo.BOMB_KEY);
-		poison = new BlockPoison(BlockInfo.POISON_ID);
-		GameRegistry.registerBlock(poison, BlockInfo.POISON_KEY);
 
 	}
 
@@ -40,11 +39,19 @@ public class Blocks {
 		LanguageRegistry.addName(mercuryEngine, BlockInfo.MERCURY_ENGINE_NAME);
 		LanguageRegistry.addName(machine, BlockInfo.MACHINE_NAME);
 		LanguageRegistry.addName(bomb, BlockInfo.BOMB_NAME);
-		LanguageRegistry.addName(poison, BlockInfo.POISON_NAME);
-	}
-	
-	public static void registerTileEntities() {
-		GameRegistry.registerTileEntity(TileEntityBomb.class, BlockInfo.BOMB_TE_KEY);
 	}
 
+	public static void registerTileEntities() {
+		GameRegistry.registerTileEntity(TileEntityBomb.class,
+				BlockInfo.BOMB_TE_KEY);
+	}
+
+	public static void registerRecipes() {
+
+		// Bomb Crafting Recipe
+		GameRegistry.addRecipe(new ItemStack(bomb), new Object[] { "sis",
+				"ibi", "srs", 'b', Items.bucketMercury, 'i', Block.fenceIron,
+				's', Block.stone, 'r', Block.blockRedstone });
+
+	}
 }
