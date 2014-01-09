@@ -69,8 +69,12 @@ public class Fluids {
 
 		materialFluidMercury = new MaterialLiquid(MapColor.clayColor);
 
-		blockMercuryLiquid = new BlockMercuryFluid(FluidInfo.MERCURY_FLUID_ID)
-				.setUnlocalizedName(FluidInfo.BLOCK_MERCURY_FLUID_UNLOCALIZED_NAME);
+		blockMercuryLiquid = new BlockFluidLiquid(FluidInfo.MERCURY_FLUID_ID, fluidMercury)
+				.setUnlocalizedName(
+						FluidInfo.BLOCK_MERCURY_FLUID_UNLOCALIZED_NAME)
+				.setTextureName(
+						FluidInfo.TEXTURE_LOCATION + ":"
+								+ FluidInfo.MERCURY_FLUID_ICON);
 		GameRegistry.registerBlock(blockMercuryLiquid,
 				FluidInfo.MERCURY_FLUID_KEY);
 

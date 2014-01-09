@@ -27,13 +27,8 @@ public class ConfigHandler extends Configuration {
 		BlockInfo.MERCURY_ENGINE_ID = config.getBlock(
 				BlockInfo.MERCURY_ENGINE_KEY, BlockInfo.MERCURY_ENGINE_DEFAULT)
 				.getInt();
-		//BlockInfo.MACHINE_ID = config.getBlock(BlockInfo.MACHINE_KEY,
-		//		BlockInfo.MACHINE_DEFAULT).getInt();
 		BlockInfo.BOMB_ID = config.getBlock(BlockInfo.BOMB_KEY,
 				BlockInfo.BOMB_DEFAULT).getInt();
-//		BlockInfo.MERCURY_BLOCK_ID = config.getBlock(
-//				BlockInfo.MERCURY_BLOCK_KEY, BlockInfo.MERCURY_BLOCK_DEFAULT)
-//				.getInt();
 
 		// Set Item ID's
 		ItemInfo.MERCURY_INGOT_ID = config.getItem(ItemInfo.MERCURY_INGOT_KEY,
@@ -68,11 +63,11 @@ public class ConfigHandler extends Configuration {
 				FluidInfo.BIOME_MERCURY_OCEAN_KEY,
 				FluidInfo.BIOME_MERCURY_OCEAN_DEFAULT).getInt();
 
-		canMercuryBurn = config.get(Configuration.CATEGORY_GENERAL, "burnOil",
-				true, "Can oil burn?").getBoolean(true);
+		canMercuryBurn = config.get(Configuration.CATEGORY_GENERAL, "burnMercury",
+				true, "Can mercury burn?").getBoolean(true);
 		mercuryWellScalar = config.get(Configuration.CATEGORY_GENERAL,
-				"oilWellGenerationRate", 1.0,
-				"Probability of oil well generation").getDouble(1.0);
+				"mercuryWellGenerationRate", 1.0,
+				"Probability of mercury well generation").getDouble(1.0);
 
 		config.save();
 	}

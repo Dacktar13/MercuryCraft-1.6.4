@@ -6,10 +6,11 @@ public class FluidInfo {
 
 	public static int MERCURY_FLUID_ID;
 	public static final String MERCURY_FLUID_KEY = "fluidMercury";
-	public static final int MERCURY_FLUID_DEFAULT = 2506;
+	public static final int MERCURY_FLUID_DEFAULT = 232;
 	public static final String MERCURY_FLUID_UNLOCALIZED_NAME = "fluidMercury";
 	public static final String MERCURY_FLUID_NAME = "Mercury Fluid";
-	public static final String MERCURY_FLUID_ICON = "mercuryFluid";
+	public static final String MERCURY_FLUID_ICON = "fluidMercury";
+	public static final String MERCURY_ORE_ICON = "mercuryOre";
 	public static final String BLOCK_MERCURY_FLUID_UNLOCALIZED_NAME = "mercury";
 
 	public static int BIOME_MERCURY_DESERT_ID;
