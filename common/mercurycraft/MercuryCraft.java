@@ -4,6 +4,10 @@ import mercurycraft.blocks.Blocks;
 import mercurycraft.config.ConfigHandler;
 import mercurycraft.entities.Entities;
 import mercurycraft.items.Items;
+import mercurycraft.crafting.RecipesBlocks;
+import mercurycraft.crafting.RecipesItems;
+import mercurycraft.crafting.RecipesLiquids;
+import mercurycraft.crafting.SmeltingRecipes;
 import mercurycraft.network.PacketHandler;
 import mercurycraft.proxies.CommonProxy;
 import mercurycraft.world.GenerationHandler;
@@ -56,8 +60,10 @@ public class MercuryCraft {
 		Items.addNames();
 		Blocks.addNames();
 		
-		Items.registerRecipes();
-		Blocks.registerRecipes();
+		SmeltingRecipes.registerRecipes();
+		RecipesItems.registerRecipes();
+		RecipesBlocks.registerRecipes();
+		RecipesLiquids.registerRecipes();
 		
 		Blocks.registerTileEntities();
 		

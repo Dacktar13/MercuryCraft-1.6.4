@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-import mercurycraft.blocks.BlockInfo;
+import mercurycraft.fluid.FluidInfo;
 import mercurycraft.fluid.Fluids;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFlower;
@@ -144,7 +144,7 @@ public class MercuryPopulate {
 						int distance = poolX * poolX + poolY * poolY + poolZ * poolZ;
 
 						if (distance <= radiusSq) {
-							world.setBlock(poolX + wellX, poolY + wellY, poolZ + wellZ, BlockInfo.MERCURY_BLOCK_ID, 0, distance == radiusSq ? 3 : 2);
+							world.setBlock(poolX + wellX, poolY + wellY, poolZ + wellZ, FluidInfo.MERCURY_FLUID_ID, 0, distance == radiusSq ? 3 : 2);
 						}
 					}
 				}
@@ -170,19 +170,19 @@ public class MercuryPopulate {
 
 			if (world.getBlockId(wellX, baseY, wellZ) == Block.bedrock.blockID) {
 				if (Fluids.spawnMercurySprings) {
-					world.setBlock(wellX, baseY, wellZ, BlockInfo.SPRING_BLOCK_ID, 1, 3);
+					world.setBlock(wellX, baseY, wellZ, FluidInfo.MERCURY_FLUID_ID, 1, 3);
 				}
 			}
 			for (int y = baseY + 1; y <= maxHeight; ++y) {
-				world.setBlock(wellX, y, wellZ, BlockInfo.MERCURY_BLOCK_ID);
+				world.setBlock(wellX, y, wellZ, FluidInfo.MERCURY_FLUID_ID);
 			}
 
 			if (type == GenType.LARGE) {
 				for (int y = wellY; y <= maxHeight - wellHeight / 2; ++y) {
-					world.setBlock(wellX + 1, y, wellZ, BlockInfo.MERCURY_BLOCK_ID);
-					world.setBlock(wellX - 1, y, wellZ, BlockInfo.MERCURY_BLOCK_ID);
-					world.setBlock(wellX, y, wellZ + 1, BlockInfo.MERCURY_BLOCK_ID);
-					world.setBlock(wellX, y, wellZ - 1, BlockInfo.MERCURY_BLOCK_ID);
+					world.setBlock(wellX + 1, y, wellZ, FluidInfo.MERCURY_FLUID_ID);
+					world.setBlock(wellX - 1, y, wellZ, FluidInfo.MERCURY_FLUID_ID);
+					world.setBlock(wellX, y, wellZ + 1, FluidInfo.MERCURY_FLUID_ID);
+					world.setBlock(wellX, y, wellZ - 1, FluidInfo.MERCURY_FLUID_ID);
 				}
 			}
 
@@ -253,7 +253,7 @@ public class MercuryPopulate {
 
 	private boolean isMercury(World world, int x, int y, int z) {
 		int blockId = world.getBlockId(x, y, z);
-		return (blockId == BlockInfo.MERCURY_BLOCK_ID);
+		return (blockId == FluidInfo.MERCURY_FLUID_ID);
 	}
 
 	private boolean isReplaceableForLake(World world, BiomeGenBase biome, int x, int y, int z) {
@@ -308,7 +308,7 @@ public class MercuryPopulate {
 				return;
 			}
 			if (isReplaceableFluid(world, x, y, z) || world.isBlockSolidOnSide(x, y - 1, z, ForgeDirection.UP)) {
-				world.setBlock(x, y, z, BlockInfo.MERCURY_BLOCK_ID, 0, update);
+				world.setBlock(x, y, z, FluidInfo.MERCURY_FLUID_ID, 0, update);
 			} else {
 				return;
 			}
@@ -320,7 +320,7 @@ public class MercuryPopulate {
 				if (isReplaceableFluid(world, x, y - d, z) || !world.isBlockSolidOnSide(x, y - d - 1, z, ForgeDirection.UP)) {
 					return;
 				}
-				world.setBlock(x, y - d, z, BlockInfo.MERCURY_BLOCK_ID, 0, 2);
+				world.setBlock(x, y - d, z, FluidInfo.MERCURY_FLUID_ID, 0, 2);
 			}
 		}
 	}

@@ -27,13 +27,13 @@ public class ConfigHandler extends Configuration {
 		BlockInfo.MERCURY_ENGINE_ID = config.getBlock(
 				BlockInfo.MERCURY_ENGINE_KEY, BlockInfo.MERCURY_ENGINE_DEFAULT)
 				.getInt();
-		BlockInfo.MACHINE_ID = config.getBlock(BlockInfo.MACHINE_KEY,
-				BlockInfo.MACHINE_DEFAULT).getInt();
+		//BlockInfo.MACHINE_ID = config.getBlock(BlockInfo.MACHINE_KEY,
+		//		BlockInfo.MACHINE_DEFAULT).getInt();
 		BlockInfo.BOMB_ID = config.getBlock(BlockInfo.BOMB_KEY,
 				BlockInfo.BOMB_DEFAULT).getInt();
-		BlockInfo.MERCURY_BLOCK_ID = config.getBlock(
-				BlockInfo.MERCURY_BLOCK_KEY, BlockInfo.MERCURY_BLOCK_DEFAULT)
-				.getInt();
+//		BlockInfo.MERCURY_BLOCK_ID = config.getBlock(
+//				BlockInfo.MERCURY_BLOCK_KEY, BlockInfo.MERCURY_BLOCK_DEFAULT)
+//				.getInt();
 
 		// Set Item ID's
 		ItemInfo.MERCURY_INGOT_ID = config.getItem(ItemInfo.MERCURY_INGOT_KEY,
@@ -55,18 +55,12 @@ public class ConfigHandler extends Configuration {
 
 		config.load();
 
-		/*FluidInfo.MERCURY_FLUID_ID = config.getBlock(
+		FluidInfo.MERCURY_FLUID_ID = config.getBlock(
 				FluidInfo.MERCURY_FLUID_KEY, FluidInfo.MERCURY_FLUID_DEFAULT)
-				.getInt();*/
-
-		FluidInfo.BLOCK_MERCURY_FLUID_ID = config.getBlock(
-				FluidInfo.BLOCK_MERCURY_FLUID_KEY,
-				FluidInfo.BLOCK_MERCURY_FLUID_DEFAULT).getInt();
-
-		ItemInfo.MERCURY_BUCKET_ID = config.getItem(
-				ItemInfo.MERCURY_BUCKET_KEY, ItemInfo.MERCURY_BUCKET_DEFAULT)
+				.getInt();
+		FluidInfo.MERCURY_BUCKET_ID = config.getItem(
+				FluidInfo.MERCURY_BUCKET_KEY, FluidInfo.MERCURY_BUCKET_DEFAULT)
 				.getInt() - 256;
-
 		FluidInfo.BIOME_MERCURY_DESERT_ID = config.get("biomes",
 				FluidInfo.BIOME_MERCURY_DESERT_KEY,
 				FluidInfo.BIOME_MERCURY_DESERT_DEFAULT).getInt();

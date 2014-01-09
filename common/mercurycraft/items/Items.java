@@ -2,10 +2,8 @@ package mercurycraft.items;
 
 import java.nio.channels.Pipe;
 
-import mercurycraft.blocks.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Items {
@@ -16,7 +14,6 @@ public class Items {
 	public static Item card;
 	public static Pipe mercuryPipe;
 
-	public static Item bucketMercury;
 
 	public static void init() {
 		mercuryIngot = new MercuryIngot(ItemInfo.MERCURY_INGOT_ID);
@@ -39,19 +36,5 @@ public class Items {
 
 	}
 
-	public static void registerRecipes() {
-
-		GameRegistry.addSmelting(Blocks.mercuryOre.blockID, new ItemStack(
-				mercuryIngot), 5);
-
-		// Mercury Stick Crafting Recipe
-		GameRegistry.addRecipe(new ItemStack(mercuryStick, 4), new Object[] {
-				"   ", " m ", " m ", 'm', mercuryIngot });
-
-		// Mercury Wand Crafting Recipe
-		GameRegistry.addRecipe(new ItemStack(mercuryWand), new Object[] {
-				"  m", " s ", "s  ", 'm', mercuryIngot, 's', mercuryStick });
-
-	}
 
 }

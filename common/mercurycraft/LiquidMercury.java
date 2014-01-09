@@ -75,6 +75,8 @@ public class LiquidMercury {
 			MinecraftForge.TERRAIN_GEN_BUS
 					.register(new mercurycraft.world.BiomeInitializer());
 		}
+		
+		Fluids.postInit();
 	}
 
 	@ForgeSubscribe

@@ -10,6 +10,7 @@ public class BlockInfo {
 	public static final String MERCURY_ORE_UNLOCALIZED_NAME = "mercuryOre";
 	public static final String MERCURY_ORE_NAME = "Mercury Ore";
 	public static final String MERCURY_ORE_ICON = "mercuryOre";
+	public static final String MERCURY_POISON_PARTICLE_TEXTURE = "poison_nocolor";
 
 	public static int BATTERY_BOX_ID;
 	public static final String BATTERY_BOX_KEY = "batteryBox";
@@ -46,20 +47,20 @@ public class BlockInfo {
 	public static final String BOMB_TEXTURE = "bomb";
 	public static final String BOMB_IDLE_TEXTURE = "bomb_idle";
 	public static final String BOMB_TE_KEY = "bombTileEntity";
-
-	public static int MERCURY_BLOCK_ID;
-	public static final String MERCURY_BLOCK_KEY = "blockMercury";
-	public static final int MERCURY_BLOCK_DEFAULT = 2506;
-	public static final String MERCURY_BLOCK_UNLOCALIZED_NAME = "blockMercury";
-	public static final String MERCURY_BLOCK_NAME = "Mercury Block";
-	public static final String MERCURY_BLOCK_ICON = "blockMercury";
-	public static final String MERCURY_POISON_PARTICLE_TEXTURE = "poison_nocolor";
-
-	public static int SPRING_BLOCK_ID;
-	public static final String SPRING_BLOCK_KEY = "springMercury";
-	public static final int SPRING_BLOCK_DEFAULT = 2507;
-	public static final String SPRING_BLOCK_UNLOCALIZED_NAME = "springBlock";
-	public static final String SPRING_BLOCK_NAME = "Mercury Spring";
-	public static final String SPRING_BLOCK_ICON = "springBlock";
+//
+//	public static int MERCURY_BLOCK_ID;
+//	public static final String MERCURY_BLOCK_KEY = "blockMercury";
+//	public static final int MERCURY_BLOCK_DEFAULT = 2506;
+//	public static final String MERCURY_BLOCK_UNLOCALIZED_NAME = "blockMercury";
+//	public static final String MERCURY_BLOCK_NAME = "Mercury Block";
+//	public static final String MERCURY_BLOCK_ICON = "blockMercury";
+//	public static final String MERCURY_POISON_PARTICLE_TEXTURE = "poison_nocolor";
+//
+//	public static int SPRING_BLOCK_ID;
+//	public static final String SPRING_BLOCK_KEY = "springMercury";
+//	public static final int SPRING_BLOCK_DEFAULT = 2507;
+//	public static final String SPRING_BLOCK_UNLOCALIZED_NAME = "springBlock";
+//	public static final String SPRING_BLOCK_NAME = "Mercury Spring";
+//	public static final String SPRING_BLOCK_ICON = "springBlock";
 
 }

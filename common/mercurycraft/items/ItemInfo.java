@@ -30,7 +30,7 @@ public class ItemInfo {
 	public static final String CARD_KEY = "Card";
 	public static final int CARD_DEFAULT = 29663;
 	public static final String CARD_UNLOCALIZED_NAME = "symbolCard";
-	public static final String[] CARD_NAMES = {"Arrow Card", "Border Card", "Cross Card"};
+	public static final String[] CARD_NAMES = {"IC Power Card", "Redstone Flux Power Card", "Buildcraft Power Card"};
 	public static final String[] CARD_ICONS = {"card_arrow", "card_box", "card_cross"};
 	
 //	public static int MERCURY_PIPE_ID;
@@ -40,12 +40,7 @@ public class ItemInfo {
 //	public static final String MERCURY_PIPE_NAME = "Mercury Pipe";
 //	public static final String MERCURY_PIPE_ICON = "mercuryPipe";
 	
-	public static int MERCURY_BUCKET_ID;
-	public static final String MERCURY_BUCKET_KEY = "bucketMercury";
-	public static final int MERCURY_BUCKET_DEFAULT = 29665;
-	public static final String MERCURY_BUCKET_UNLOCALIZED_NAME = "bucketMercury";
-	public static final String MERCURY_BUCKET_NAME = "Bucket of Mercury";
-	public static final String MERCURY_BUCKET_ICON = "mercuryBucket";
+	
 	
 	
 	
